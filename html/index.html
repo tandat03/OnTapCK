@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="menu">
+        <div class="breadcrumb">
+            <li><a href="" class="btn btn-default">Trang chu</a> </li>
+            <li><a href="" class="btn btn-default" data-toggle="modal" data-target="#myModal">Dat Lich</a> </li>
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">dat lich</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" method="POST" role="form">
+                            <div class="form-group">
+                                <label for="">Mã bệnh nhân</label>
+                                <input type="text" class="form-control" id="txMaBenhNhan" placeholder="Mã bệnh nhân">
+                                <p class="form-message"></p>
+                            </div>
+                            <div class="form-group">
+                              <label for="pwd">Password:</label>
+                              <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                              <p class="form-message"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Ngay Kham</label>
+                                <input type="date" class="form-control" id="txDate">
+                                <p class="form-message"></p>
+                            </div>
+                            <div class="checkbox-group">
+                                <label for="">Loại dịch vụ</label>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="textDichVu" value="500000" id="checkKhamYeuCau">
+                                        Khám bệnh theo yêu cầu
+                                    </label> 
+
+                                    <label>
+                                        <input type="checkbox" name="textDichVu" value="500000" id="checkKhamNgoaiTru">
+                                        Điều trị ngoại trú
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" name="textDichVu" value="500000" id="checkBacSiYeuCau">
+                                        Bác sĩ theo yêu cầu
+                                    </label>
+                                </div>
+                            </div>
+                        <div class="form-group">
+                            <label for="">chuyen khoa</label>
+                            <select name="txSelect" id="txSelect" class="form-control">
+                                <option value="">ngoai</option>
+                                <option value="">noi</option>
+                                <option value="">nhi</option>
+                            </select>
+                            <label for="" class="lbRegex">(*)</label>
+                          </div>
+                            <button type="submit" class="btn btn-default" id="submit">dat lich</button>
+                          </form>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>STT</th>
+                    <th>MA BN</th>
+                    <th>PASS</th>
+                    <th>NGAY KHAM</th>
+                    <th>PHU THU DICH VU</th>
+                    <th>CHUYEN KHOA</th>
+                  </tr>
+                </thead>
+                <tbody id="rowCount">
+                  <tr>
+                    <td>1</td>
+                    <td>BN-012345</td>
+                    <td>123456a</td>
+                    <td>12/8/2020</td>
+                    <td>1000000</td>
+                    <td>Ngoại tổng quát</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="info">
+                <p class="information">21004435-Tran Tan Dat</p>
+             </div>
+            </div>
+            <script src="/js/js.js"></script>
+</body>
+</html>
